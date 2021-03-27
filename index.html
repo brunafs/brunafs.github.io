@@ -6,107 +6,8 @@
 
    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
    <link href="font/flaticon.css" rel="stylesheet">
-
-   <style>
-      #header {
-         position: fixed;
-         top: 0;
-         left: 0;
-         bottom: 0;
-         z-index: 9997;
-         transition: all 0.5s;
-         padding: 15px;
-         overflow-y: auto;
-      }
-      .nav-menu * {
-         margin: 0;
-         padding: 0;
-         list-style: none;
-      }
-      .nav-menu > ul > li {
-         position: relative;
-         white-space: nowrap;
-      }
-      .nav-menu a {
-         display: flex;
-         align-items: center;
-         color: #45505b;
-         padding: 10px 18px;
-         transition: 0.3s;
-         margin-bottom: 8px;
-         font-size: 15px;
-         border-radius: 50px;
-         background: #f2f3f5;
-         height: 56px;
-         width: 100%;
-         overflow: hidden;
-         transition: 0.3s;
-      }
-      .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-         color: #fff;
-         background: #0563bb;
-      }
-
-      /* .nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
-         color: #fff;
-      } */
-
-      /* .nav-menu a:hover, .nav-menu li:hover > a {
-         width: 100%;
-         color: #fff;
-      } */
-
-      .nav-menu a:hover span, .nav-menu li:hover > a span {
-         display: block;
-      }
-      .nav-menu a span {
-         display: none;
-         margin-left: 15px;
-      }
-
-      #nome {
-         position: relative;
-         margin-top: 20%;
-         margin-left: 20%;
-      }
-      #nome h1 {
-         margin: 0;
-         font-size: 64px;
-         color: #45505b;
-      }
-      #nome p {
-         color: #45505b;
-         margin: 15px 0 0 0;
-         font-size: 26px;
-         font-family: "Poppins", sans-serif;
-      }
-      #nome .social-links {
-         margin-top: 30px;
-      }
-
-      #nome .social-links a {
-         font-size: 24px;
-         display: inline-block;
-         color: #45505b;
-         line-height: 1;
-         margin-right: 20px;
-         transition: 0.3s;
-      }
-
-      #nome .social-links a:hover {
-         color: #0563bb;
-      }
-      
-      #banner {
-         position: absolute;
-         background-image: url(banner1.png);
-         background-size: cover;
-         width: 100%;
-         height: 95%;
-         opacity: .3;
-         left: 30%;
-      }
-   </style>
+   <link href="css/style.css" rel="stylesheet">
+   <link href="js/main.js">
 
 </head>
 <body>
@@ -127,14 +28,13 @@
       <div class="col" id="banner"></div>
       <div class="col" id="nome">
          <h1>Bruna Santana</h1>
-         <p>Eu sou <span id="demo" class="typed" data-typed-items="Designer, Desenvolvedora, Freelancer"></span></p>
+         <p>Eu sou <span id="demo"></span></p>
          
          <div class="social-links">
             <a href="#"><i class="flaticon-github"></i></a>
             <a href="#"><i class="flaticon-linkedin"></i></a>
          </div>
       </div>
-
    </div>
 
 </body>
@@ -147,6 +47,7 @@ var txt = 'Desenvolvedora, Designer, Freelancer';
 var speed = 300;
 
 function initPage(){
+   //TYPING EFFECT NA HOME PAGE 
    if (i < txt.length) {
       if (txt.charAt(i) == ',') {
          document.getElementById("demo").innerHTML = '';
@@ -159,7 +60,6 @@ function initPage(){
          document.getElementById("demo").innerHTML = '';
       }
       setTimeout(initPage, speed);
-
    }
 }
 
