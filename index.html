@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <title>Portfolio</title>
 
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <link href="font/flaticon.css" rel="stylesheet">
+   <link href="includes/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="includes/font/flaticon.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
    <link href="js/main.js">
 
@@ -28,7 +28,7 @@
       <div class="col" id="banner"></div>
       <div class="col" id="nome">
          <h1>Bruna Santana</h1>
-         <p>Eu sou <span id="demo"></span></p>
+         <p>Eu sou <span id="typing"></span></p>
          
          <div class="social-links">
             <a href="#"><i class="flaticon-github"></i></a>
@@ -50,14 +50,14 @@ function initPage(){
    //TYPING EFFECT NA HOME PAGE 
    if (i < txt.length) {
       if (txt.charAt(i) == ',') {
-         document.getElementById("demo").innerHTML = '';
+         document.getElementById("typing").innerHTML = '';
          i++;
       }
-      document.getElementById("demo").innerHTML += txt.charAt(i);
+      document.getElementById("typing").innerHTML += txt.charAt(i);
       i++;
       if (i == txt.length){
          i = 0;
-         document.getElementById("demo").innerHTML = '';
+         document.getElementById("typing").innerHTML = '';
       }
       setTimeout(initPage, speed);
    }

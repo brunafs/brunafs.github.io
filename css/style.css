@@ -89,7 +89,7 @@
 
 #banner {
    position: absolute;
-   background-image: url(../banner1.png);
+   background-image: url(../includes/banner1.png);
    background-size: cover;
    width: 100%;
    height: 95%;
