@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+   // NAV MENU SCROLL
+   $(document).on("scroll", onScroll);
+   navControl();
+   // $('.nav-menu a').hover(function() {
+   //    $('li').removeClass('active');
+   // });
+
+
    // Skills section
    $('.progress .progress-bar').each(function() {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
@@ -23,7 +31,7 @@ $(document).ready(function(){
 
    // TYPING EFFECT NA HOME PAGE 
    var i = 0;
-   var txt = 'Desenvolvedora, Designer, Freelancer';
+   var txt = 'Programadora, Engenheira, Designer, Freelancer';
    var speed = 300;
 
    function initPage(){
@@ -108,3 +116,29 @@ function validar(){
 }
 // VALIDA CAMPOS FORMULARIO
 // SUBMIT FORMULARIO
+
+// NAV MENU SCROLL
+function navControl() {
+   $('.nav-menu a[href^="#"]').click(function() {
+      $('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+   });
+
+
+}
+function onScroll(event){
+   var scrollPos = $(document).scrollTop();
+   $('.nav-menu a[href^="#"]').each(function () {
+       var currLink = $(this);
+       var refElement = $(currLink.attr("href"));
+       if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+           $('li').removeClass("active");
+           currLink.closest('li').addClass("active");
+       }
+       else{
+           currLink.removeClass("active");
+       }
+   });
+}
+// NAV MENU SCROLL
+
