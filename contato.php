@@ -42,7 +42,7 @@ if (!empty($_POST['email']) && !empty($_POST['msg']) && !empty($_POST['assunto']
    // ENVIO
    if($mail->send()){
       $response['status'] = 'sucess';
-      $response['mensagem'] = 'E-mail enviado !';
+      $response['mensagem'] = 'E-mail enviado ! :D';
    } else {
       $response['status'] = 'error';
       $msgErro = $mail -> ErrorInfo;

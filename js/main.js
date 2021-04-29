@@ -3,10 +3,6 @@ $(document).ready(function(){
    // NAV MENU SCROLL
    $(document).on("scroll", onScroll);
    navControl();
-   // $('.nav-menu a').hover(function() {
-   //    $('li').removeClass('active');
-   // });
-
 
    // Skills section
    $('.progress .progress-bar').each(function() {
@@ -52,11 +48,9 @@ $(document).ready(function(){
    initPage();
    // TYPING EFFECT NA HOME PAGE 
 
-
    // SUBMIT FORMULARIO
    $('#formContato').submit(function(e){
       e.preventDefault();
-
       validar();
 
       var nome = $('#name').val();
@@ -76,17 +70,21 @@ $(document).ready(function(){
             type: "POST",
             success: function(data){
                if(data.status == 'sucess'){
+                  $('#load').html('');
                   $('.mensagem').html(data.mensagem).addClass('field-sucess').fadeIn(300);
                   $('.form-control').val('');
                } else {
+                  $('#load').html('');
                   $('.mensagem').html(data.mensagem).addClass('field-error').fadeIn(300);
                }
             },
             error: function(data){
                if(data.status == 'sucess'){
+                  $('#load').html('');
                   $('.mensagem').html(data.mensagem).addClass('field-sucess').fadeIn(300);
                   $('.form-control').val('');
                } else {
+                  $('#load').html('');
                   $('.mensagem').html(data.mensagem).addClass('field-error').fadeIn(300);
                }
             }
@@ -122,6 +120,10 @@ function navControl() {
    $('.nav-menu a[href^="#"]').click(function() {
       $('li').removeClass('active');
       $(this).closest('li').addClass('active');
+   });
+
+   $('.nav-menu').hover(function() {
+      // alert('hehe');
    });
 
 

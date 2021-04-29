@@ -1,0 +1,61 @@
+<!-- CONTATO -->
+<section id="contato">
+   <div class="container">
+      <div id="sobre-titulo">
+         <h2>Contato</h2>
+      </div>
+
+      <div class="row mt-1">
+         <div class="col-lg-4">
+
+            <div class="contato-icons">
+               <div class="contato-item">
+                  <i class="flaticon-pin"></i>
+                  <h4>Local:</h4>
+                  <p>Brasília - DF, Brasil</p>
+               </div>
+
+               <div class="contato-item">
+                  <i class="flaticon-letter azul"></i>
+                  <h4>Email:</h4>
+                  <p>brunasantana98@gmail.com</p>
+               </div>
+
+               <div class="contato-item">
+                  <i class="flaticon-phone-call"></i>
+                  <h4>Telefone:</h4>
+                  <p>(61) 98212-4998</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-8 mt-5 mt-lg-0">
+            <form class="contato-form" id="formContato" >
+               <div class="form-row" >
+                  <div class="col-md-6 form-group">
+                     <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Pelo menos 4 caracteres" />
+                  </div>
+                  <div class="col-md-6 form-group">
+                     <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" data-rule="email" data-msg="E-mail inválido" />
+                  </div>
+               </div>
+
+               <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Pelo menos 4 caracteres" />
+               </div>
+               <div class="form-group">
+                  <textarea class="form-control" id="message" name="message" rows="5" data-rule="required" data-msg="Escreva algo para me enviar" placeholder="Mensagem"></textarea>
+               </div>
+               <div class="mb-3">
+                  <div id="load" class="field-sucess"></div>
+                  <div class="mensagem"></div>
+               </div>
+               <div class="text-center">
+                  <button type="submit">Enviar</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- CONTATO -->
