@@ -1,10 +1,14 @@
 <!-- HOME -->
 <section id="home">
    <div class="row">
-      <div class="col" id="banner"></div>
+      <div class="col" id="banner">
+         <img id="banner" class="img-responsive" src="includes\img\banner1.png">
+      </div>
       <div class="col" id="nome">
+         <a class='idioma' href="?idioma=pt-br/index.php">PT-BR</a>
+         <a class='idioma' href="?idioma=en-us/index.php">EN-US</a>
          <h1>Bruna Santana</h1>
-         <p>Eu sou <span id="typing"></span></p>
+         <p><span id="type"></span><span id="typing"></span></p>
          
          <div class="social-links">
             <a href="https://github.com/brunafs" target="_blank"><i class="flaticon-github"></i> </a>
@@ -14,3 +18,39 @@
    </div>
 </section>
 <!-- HOME -->
+<script>
+$(document).ready(function(){
+   // TYPING EFFECT NA HOME PAGE 
+   var i = 0;
+   var txt = '';
+   var speed = 300;
+
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('idioma');
+   if (myParam == null || myParam == 'pt-br/index.php'){
+      document.getElementById("type").innerHTML = 'Eu sou ';
+      txt = 'Programadora, Engenheira, Designer, Freelancer';
+   } else if (myParam == 'en-us/index.php'){
+      document.getElementById("type").innerHTML = 'I am ';
+      txt = 'Programmer, Engineer, Designer, Freelancer';
+   }
+
+   function initPage(){
+      if (i < txt.length) {
+         if (txt.charAt(i) == ',') {
+            document.getElementById("typing").innerHTML = '';
+            i++;
+         }
+         document.getElementById("typing").innerHTML += txt.charAt(i);
+         i++;
+         if (i == txt.length){
+            i = 0;
+            document.getElementById("typing").innerHTML = '';
+         }
+         setTimeout(initPage, speed);
+      }
+   }
+   initPage();
+   // TYPING EFFECT NA HOME PAGE 
+});
+</script>

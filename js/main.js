@@ -25,28 +25,28 @@ $(document).ready(function(){
    });
    // BOTAO VOLTAR PARA O TOPO
 
-   // TYPING EFFECT NA HOME PAGE 
-   var i = 0;
-   var txt = 'Programadora, Engenheira, Designer, Freelancer';
-   var speed = 300;
+   // // TYPING EFFECT NA HOME PAGE 
+   // var i = 0;
+   // var txt = 'Programadora, Engenheira, Designer, Freelancer';
+   // var speed = 300;
 
-   function initPage(){
-      if (i < txt.length) {
-         if (txt.charAt(i) == ',') {
-            document.getElementById("typing").innerHTML = '';
-            i++;
-         }
-         document.getElementById("typing").innerHTML += txt.charAt(i);
-         i++;
-         if (i == txt.length){
-            i = 0;
-            document.getElementById("typing").innerHTML = '';
-         }
-         setTimeout(initPage, speed);
-      }
-   }
-   initPage();
-   // TYPING EFFECT NA HOME PAGE 
+   // function initPage(){
+   //    if (i < txt.length) {
+   //       if (txt.charAt(i) == ',') {
+   //          document.getElementById("typing").innerHTML = '';
+   //          i++;
+   //       }
+   //       document.getElementById("typing").innerHTML += txt.charAt(i);
+   //       i++;
+   //       if (i == txt.length){
+   //          i = 0;
+   //          document.getElementById("typing").innerHTML = '';
+   //       }
+   //       setTimeout(initPage, speed);
+   //    }
+   // }
+   // initPage();
+   // // TYPING EFFECT NA HOME PAGE 
 
    // SUBMIT FORMULARIO
    $('#formContato').submit(function(e){

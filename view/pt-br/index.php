@@ -13,19 +13,18 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<body> 
-   <?php
-      session_start();
-      include 'view/home.html';
+<body>
+   <!-- ======= Mobile nav toggle button ======= -->
+   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button> -->
 
-      if(!isset($_GET['idioma'])){
-         $_SESSION['idioma'] = 'view/pt-br/index.php';
-         include $_SESSION['idioma'];
-      } else if(isset($_GET['idioma']))
-      {
-         include 'view/'.$_GET['idioma'];
-      };
-   ?> 
+   <?php
+      include 'view/header.html';
+      include 'sobre.html';
+      include 'view/skills.html';
+      include 'ccv.html';
+      include 'contato.html';
+      include 'view/footer.html';
+   ?>
 
 </body>
 </html>
